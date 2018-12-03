@@ -119,6 +119,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         }
 
         premium = premium + extraMale + extraSmoker;
-        textViewPremium.setText("RM " + premium + "");
+        textViewPremium.setText(getString(R.string.premium) + "=" + premium);
+    }
+
+    public void reset(View view){
+        spinnerAge.setSelection(0);
+        radioGroupGender.clearCheck();
+        checkBoxSmoker.setChecked(false);
+        textViewPremium.setText(getString(R.string.premium));
     }
 }
